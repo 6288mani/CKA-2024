@@ -29,15 +29,15 @@ Here’s a breakdown of the commands to manage taints and tolerations:
 ### Tainting a Node:
 
 ```bash
-kubectl taint nodes node1 key=gpu:NoSchedule
+kubectl taint nodes node1 gpu=true:NoSchedule
 ```
 
-This command taints node1 with the key "gpu" and the effect "NoSchedule." Pods without a toleration for this taint won't be scheduled there.
+This command taints node1 with the key "gpu", value "true" and the effect "NoSchedule." Pods without a toleration for this taint won't be scheduled there.
 
 To remove the taint , you add - at the end of the command , like below.
 
 ```bash
-kubectl taint nodes node1 key=gpu:NoSchedule-
+kubectl taint nodes node1 gpu=true:NoSchedule-
 ```
 
 ### Adding toleration to the pod:
