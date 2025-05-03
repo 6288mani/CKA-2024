@@ -20,6 +20,9 @@ nodes:
 - role: worker
 - role: worker
 ```
+###command to create new cluster 
+
+``` kind create cluster --config kind.yaml --name cka-cluster```
 
 ### What is Service in Kubernetes
 
@@ -98,4 +101,17 @@ spec:
   - port: 80
   selector:
     env: demo
+```
+
+#### Sample YAML for external name
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  namespace: prod
+spec:
+  type: ExternalName
+  externalName: my.api.example.com
 ```
