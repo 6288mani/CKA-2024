@@ -1,4 +1,4 @@
-## Task 18/40
+## Task 19/40
 
 In this exercise, you will explore config maps, secrets and environment variables
 > [!NOTE]
